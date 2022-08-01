@@ -1,0 +1,84 @@
+.nav-bar {
+    font-size: 1.5em;
+    background-color: var(--color-nav);
+    width: 100%;
+    height: 40px;
+    padding: 20px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+}
+
+.menu {
+    box-shadow: 0 5px 5px var(--sombra-nav);
+    background-color: var(--color-nav);
+    margin-left: -100%;
+    transition: all 0.10s;
+    position: relative;
+    width: 100%;
+}
+
+.menu-item {
+    font-size: 20px;
+    padding: 20px;
+    list-style: none;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+.menu-link:hover {
+    color: beige;
+}
+
+
+.menu-link {
+    text-decoration: none;
+    padding: 20px;
+    font-size: 1em;
+    color: rgb(0, 0, 0);
+}
+
+
+/*pantallas anchas*/
+@media(min-width:890px) {
+    .nav-bar {
+        display: none;
+        /*desaparecemos el nav-bar una vez maximixado*/
+    }
+
+    .menu {
+        display: flex;
+        justify-content: space-around;
+        /*para qwue se muetre uno ala lado del otro*/
+        margin-left: 0%;
+        /*para que se muestre*/
+        position: fixed;
+        width: 100%;
+        z-index: 100;
+    }
+
+   
+}
+
+/*pantallas chicas*/
+@media(max-width:889px) {
+    .menu {
+        text-align: center;
+        padding: 0%;
+        position: absolute;
+        z-index: 100;
+    }
+
+    .main-nav {
+        margin-bottom: 0;
+    }
+
+    .menu-item {
+        font-size: 25px;
+    }
+     .mostrar {      
+        margin-left: 0;
+        height: 100%;
+    }
+}

@@ -1,0 +1,47 @@
+:root {
+    --color-fondo: rgb(253, 253, 229);
+    --color-nav: rgb(148, 96, 138);
+    --sombra-nav: rgb(143, 90, 128);
+    --color-text: black;
+}
+
+body {
+    background: var(--color-fondo);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+span i {
+    background-color: var(--color-nav);
+    color: var(--color-fondo);
+    
+
+}
+
+h3 i {
+    color: rgba(163, 163, 163, 0.765)
+}
+
+.decorador {
+    color: rgb(122, 64, 111) 3px 3px 5px;
+}
+
+#titulo {
+    letter-spacing: 4px;
+    word-spacing: 5px;
+}
+
+div h2 {
+    text-align: center;
+}
+
+/*pantallas chicas*/
+@media(max-width:768px) {
+
+    header {
+        flex-direction: column;
+    }
+
+    #inicio-fin {
+        text-align: right;
+    }
+}

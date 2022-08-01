@@ -1,0 +1,22 @@
+#habilidades {
+    scroll-margin-top: 70px;
+}
+
+.skills-list {
+    display: flex;
+    padding: 0;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skills-item {
+    box-shadow: 0 5px 10px var(--color-nav);
+    border-radius: 20px;
+    margin: 20px;
+    width: 110px;
+    padding: 5px 5px;
+    text-align: center;
+    padding: 0.5em 0.7em;
+
+}
