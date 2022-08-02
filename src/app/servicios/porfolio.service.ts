@@ -8,11 +8,15 @@ import { Observable } from 'rxjs';
 })
 export class PorfolioService {
 
-  constructor() { }
-  obtenerDatos() {
-    console.log("El servicio funciona correctamente");
+  constructor(private http: HttpClient) { }
+ 
+  obtenerDatos():Observable<any> {
+    return this.http.get('/lista/persona');
   }
 }
+
+
+
 //implementaremos las llamadas http para obtener los recursos del servidor
 //interesandonos todos los datos del porfolio y haciendo la aplicacion dinamica
 //constructor (http: HttpClient){}

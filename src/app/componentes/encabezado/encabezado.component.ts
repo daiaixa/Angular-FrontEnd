@@ -8,14 +8,11 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
 })
 export class EncabezadoComponent implements OnInit {
   
-  constructor(private datosPorfolio: PorfolioService) { }//inyectamos el servicio
+  constructor() { }
 
   public classMenu: boolean = true;
 
-  ngOnInit(): void {
-
-   this.datosPorfolio.obtenerDatos()
-    
+  ngOnInit(): void {  
    
   }
   mostarMenu(): void {
