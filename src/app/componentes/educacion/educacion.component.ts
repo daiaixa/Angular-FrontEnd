@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { observable } from 'rxjs';
+import { PorfolioService } from 'src/app/servicios/porfolio.service';
 
 @Component({
   selector: 'app-educacion',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EducacionComponent implements OnInit {
 
-  constructor() { }
+  datosEducacion:any;
+  
+  constructor(private datosPorfolio: PorfolioService) { }
 
   ngOnInit(): void {
-  }
 
+    this.datosPorfolio.DatosEducacion().subscribe(data => {
+      console.log(data);
+      this.datosEducacion = data;
+    });
+  }
 }

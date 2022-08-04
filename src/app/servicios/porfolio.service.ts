@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import {HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { Observable} from 'rxjs';
 
 
 @Injectable({
@@ -9,11 +9,23 @@ import { Observable } from 'rxjs';
 export class PorfolioService {
 
   constructor(private http: HttpClient) { }
+
  
-  obtenerDatos():Observable<any> {
+  DatosPersona():Observable<any> {
     return this.http.get('/lista/persona');
   }
+
+  DatosEducacion():Observable<any> {
+    const url = "/lista/educacion"
+    return this.http.get<any>('url');
 }
+
+DatosExperiencia():Observable<any> {
+  const url = "/lista/experiencia"
+  return this.http.get<any>(url);
+}
+}
+
 
 
 

@@ -9,13 +9,18 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
 })
 export class AcercaDeMiComponent implements OnInit {
 
-  constructor(private datosPorfolio:PorfolioService) { }
+  datosPersonas:any;
+
+  constructor(private datosPorfolio: PorfolioService) { }
 
   ngOnInit(): void {
 
-    this.datosPorfolio.obtenerDatos().subscribe(data => {
-      console.log(data);
-    });
-  }
+      this.datosPorfolio.DatosPersona().subscribe(data => {
+        console.log(data);
+        this.datosPersonas = data;
+      });
 
-}
+    }
+
+
+  }
