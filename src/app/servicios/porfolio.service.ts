@@ -16,13 +16,12 @@ export class PorfolioService {
   }
 
   DatosEducacion():Observable<any> {
-    const url = "/lista/educacion"
-    return this.http.get<any>('url');
+    
+    return this.http.get<any>('/lista/educacion');
 }
 
 DatosExperiencia():Observable<any> {
-  const url = "/lista/experiencia"
-  return this.http.get<any>(url);
+  return this.http.get<any>('/lista/experiencia');
 }
 }
 
