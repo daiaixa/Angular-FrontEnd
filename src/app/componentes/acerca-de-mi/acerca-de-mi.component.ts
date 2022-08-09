@@ -9,18 +9,16 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
 })
 export class AcercaDeMiComponent implements OnInit {
 
-  datosPersonas:any;
+  public datosPersonas: Array<any> = [];
 
   constructor(private datosPorfolio: PorfolioService) { }
 
   ngOnInit(): void {
 
-      this.datosPorfolio.DatosPersona().subscribe(data => {
-        console.log(data);
-        this.datosPersonas = data;
-      });
-
-    }
-
-
+    this.datosPorfolio.DatosPersona().subscribe(data => {
+      this.datosPersonas = data;
+      console.log(this.datosPersonas);   
+    });
   }
+
+}

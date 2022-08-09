@@ -1,3 +1,10 @@
 #experiencia {
     scroll-margin-top: 70px;
 }
+li {
+    list-style: none;
+}
+
+ul {
+    padding: 5px;
+}
