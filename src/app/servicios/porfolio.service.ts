@@ -12,16 +12,16 @@ export class PorfolioService {
 
  
   DatosPersona():Observable<any> {
-    return this.http.get('http://localhost:8080/api/persona');
+    return this.http.get('http://localhost:8080/persona/lista');
   }
 
   DatosEducacion():Observable<any> {
     
-    return this.http.get<any>('http://localhost:8080/lista/educacion');
+    return this.http.get<any>('http://localhost:8080/educacion/lista');
 }
 
 DatosExperiencia():Observable<any> {
-  return this.http.get<any>('http://localhost:8080/lista/experiencia');
+  return this.http.get<any>('http://localhost:8080/experiencia/lista');
 }
 }
 
