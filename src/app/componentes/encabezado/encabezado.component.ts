@@ -7,19 +7,17 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
   styleUrls: ['./encabezado.component.css']
 })
 export class EncabezadoComponent implements OnInit {
+  public classMenu: boolean = true;
   
   constructor() { }
 
-  public classMenu: boolean = true;
 
-  ngOnInit(): void {  
-   
-  }
+
+  ngOnInit(): void { }
   mostarMenu(): void {
     this.classMenu = !this.classMenu
   }
 }
-
 
 
 

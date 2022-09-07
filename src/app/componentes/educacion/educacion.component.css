@@ -8,3 +8,15 @@ li {
 ul {
     padding: 5px;
 }
+
+
+button{
+    align-items: flex-end;
+    margin: 0px 10px;
+}
+
+.botones {
+    display: flex;
+    justify-content: end;
+}
+

@@ -16,6 +16,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { PorfolioService } from './servicios/porfolio.service';
 import { InterceptorService } from './servicios/interceptor.service';
 import { RegistroComponent } from './componentes/inicio-sesion/registro.component';
+import { EditarExperienciaComponent } from './componentes/editar-experiencia/editar-experiencia.component';
+import { CrearrExperienciaComponent } from './componentes/crearr-experiencia/crearr-experiencia.component';
 
 
 
@@ -30,7 +32,9 @@ import { RegistroComponent } from './componentes/inicio-sesion/registro.componen
     ExperienciaComponent,
     InicioSesionComponent,
     PorfolioComponent,
-    RegistroComponent
+    RegistroComponent,
+    EditarExperienciaComponent,
+    CrearrExperienciaComponent
   ],
   imports: [
     BrowserModule,

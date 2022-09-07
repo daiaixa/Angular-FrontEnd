@@ -1,10 +1,12 @@
 <div class="experiencia p-5 text-muted" id="experiencia">
-    <h2 class="text-muted mb-0 ml-3" id="titulo">Experiencia:</h2>
+    <h2 class="text-muted mb-0 ml-3" id="titulo">Experiencia <button type="button" class="btn btn-primary">Agregar</button></h2>
     <div>
         <hr class="decorador" />
     </div>
     <ul>
         <li *ngFor="let experiencia of datosExperiencia">
+            <div class="botones" ><button type="button" class="btn btn-success">Editar</button> <!--*ngIf="isLogged"-->
+                <button type="button" class="btn btn-danger">Borrar</button></div>
             <div class="experiencia">
                 <h3 class="mt-5 mb-0 text-muted">
                     <i class="fa-solid fa-briefcase"></i>

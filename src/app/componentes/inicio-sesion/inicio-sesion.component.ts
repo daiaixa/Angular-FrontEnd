@@ -13,7 +13,6 @@ export class InicioSesionComponent implements OnInit {
   form: FormGroup;
 
   constructor(
-    //private tokenService: TokenService,
     private authService: AutenticacionService,
     private FormBuilder: FormBuilder,
     private ruta: Router) {
@@ -31,8 +30,7 @@ export class InicioSesionComponent implements OnInit {
 //escribimos dos propiedades para obtener el email y la contraseña
     get Email() {
       return this.form.get('email');
-    }
-   
+    }   
      get Password() {
        return this.form.get('password');
     }

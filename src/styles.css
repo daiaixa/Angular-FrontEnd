@@ -14,7 +14,6 @@ span i {
     background-color: var(--color-nav);
     color: var(--color-fondo);
     
-
 }
 
 h3 i {
@@ -45,3 +44,11 @@ div h2 {
         text-align: right;
     }
 }
+
+@media(min-width:890px) {
+
+    h2#titulo {
+        padding-top: 50px;
+    }
+    
+    }
