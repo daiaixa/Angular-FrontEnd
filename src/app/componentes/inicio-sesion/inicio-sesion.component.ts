@@ -24,9 +24,8 @@ export class InicioSesionComponent implements OnInit {
         })
       }
 
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
+  ngOnInit(): void {   }
+
 //escribimos dos propiedades para obtener el email y la contraseña
     get Email() {
       return this.form.get('email');
@@ -35,12 +34,13 @@ export class InicioSesionComponent implements OnInit {
        return this.form.get('password');
     }
 
-    inicioSesion(event:Event) {//recibir un evento para poder llamar el metodo preventDefault
+    logIn(event:Event) {//recibir un evento para poder llamar el metodo preventDefault
       try { event.preventDefault;//este metodo cancelará el curso normal del formulario
       this.authService.IniciarSesion(this.form.value).subscribe(data => {
         console.log("DATA"+JSON.stringify(data));
         this.ruta.navigate(['/perfil']);
       })}
-      catch (Error) { console.log("error en el metodo");}
+      catch (Error) {console.log("error en el metodo");}
     }
+
   }

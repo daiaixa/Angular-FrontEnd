@@ -1,12 +1,12 @@
 export class educacion {
     id?: number; //el id es autogenerado
-    establecimiento: String;
-    curso: String;
-    descripcion : String;
-    fecha_inicio : String;
-    fecha_fin : String;
+    establecimiento;
+    curso;
+    descripcion;
+    fecha_inicio;
+    fecha_fin;
 
-    constructor (establecimiento: String, curso: String, descripcion: String, fecha_inicio: String, fecha_fin: String){
+    constructor (establecimiento: string, curso: string, descripcion: string, fecha_inicio: string, fecha_fin: string){
         this.establecimiento = establecimiento;
         this.curso = curso;
         this.descripcion = descripcion;

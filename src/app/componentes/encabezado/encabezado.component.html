@@ -8,7 +8,9 @@
                 <li class="menu-item" id="item"> <a href="perfil/habilidades" class="menu-link">Habilidades</a></li>
                 <li class="menu-item" id="item"> <a href="perfil/educacion" class="menu-link">Educación</a></li>
                 <li class="menu-item" id="item"> <a href="perfil/experiencia" class="menu-link">Experiencia</a></li>
-                <li class="menu-item" id="item"> <a href="login" class="menu-link">Ingresar</a></li>
+                <li class="menu-item" id="item" *ngIf="!isLogged"> <a href="login" class="menu-link">Ingresar</a></li>
+                <li class="menu-item" id="item"  *ngIf="isLogged"> <a (click)="cerrarSession()" class="menu-link" href="perfil">Cerrar Sesión</a></li>
+
             </ul>
         </nav>
        

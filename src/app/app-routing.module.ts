@@ -7,6 +7,10 @@ import { AcercaDeMiComponent } from './componentes/acerca-de-mi/acerca-de-mi.com
 import { EducacionComponent } from './componentes/educacion/educacion.component';
 import { HabilidadesComponent } from './componentes/habilidades/habilidades.component';
 import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
+import { CrearEduComponent } from './componentes/educacion/crear-edu.component';
+import { EditarEduComponent } from './componentes/educacion/editar-edu.component';
+import { CrearExpComponent } from './componentes/experiencia/crear-exp.component';
+import { EditarExpComponent } from './componentes/experiencia/editar-exp.component';
 
 const routes: Routes = [
   {path:'perfil',component:PorfolioComponent},
@@ -16,6 +20,10 @@ const routes: Routes = [
   {path:'perfil/habilidades', component:HabilidadesComponent},
   {path:'perfil/educacion', component:EducacionComponent},
   {path:'perfil/experiencia', component:ExperienciaComponent},
+  {path:'new-educacion', component:CrearEduComponent},
+  {path: 'editaredu/:id', component:EditarEduComponent},
+  {path:'new-experiencia', component:CrearExpComponent},
+  {path:'editarexp/:id', component:EditarExpComponent},
   {path: '', redirectTo: 'perfil', pathMatch:'full'}
 ]
 

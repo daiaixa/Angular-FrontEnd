@@ -12,12 +12,13 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { InicioSesionComponent } from './componentes/inicio-sesion/inicio-sesion.component';
 import { PorfolioComponent } from './componentes/porfolio/porfolio.component';
 import { AppRoutingModule } from './app-routing.module';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PorfolioService } from './servicios/porfolio.service';
 import { InterceptorService } from './servicios/interceptor.service';
-import { RegistroComponent } from './componentes/inicio-sesion/registro.component';
-import { EditarExperienciaComponent } from './componentes/editar-experiencia/editar-experiencia.component';
-import { CrearrExperienciaComponent } from './componentes/crearr-experiencia/crearr-experiencia.component';
+import { EditarEduComponent } from './componentes/educacion/editar-edu.component';
+import { CrearEduComponent } from './componentes/educacion/crear-edu.component';
+import { EditarExpComponent } from './componentes/experiencia/editar-exp.component';
+import { CrearExpComponent } from './componentes/experiencia/crear-exp.component';
 
 
 
@@ -32,15 +33,17 @@ import { CrearrExperienciaComponent } from './componentes/crearr-experiencia/cre
     ExperienciaComponent,
     InicioSesionComponent,
     PorfolioComponent,
-    RegistroComponent,
-    EditarExperienciaComponent,
-    CrearrExperienciaComponent
+    EditarEduComponent,
+    CrearEduComponent,
+    EditarExpComponent,
+    CrearExpComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    FormsModule
   ],
   providers: [PorfolioService,
   {provide: HTTP_INTERCEPTORS,

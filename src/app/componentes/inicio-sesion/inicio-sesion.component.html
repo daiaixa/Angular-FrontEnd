@@ -1,6 +1,6 @@
 <div class="conteiner">
   <h1>Iniciar Sesión</h1>
-  <form [formGroup]="form" class="m-5" (ngSubmit)="inicioSesion($event)"><!--cambiar el metodo por login-->
+  <form [formGroup]="form" class="m-5" (ngSubmit)="logIn($event)">
 
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Direccion de Email</label>
@@ -22,6 +22,6 @@
       <p *ngIf="Password?.errors?.['minlength']" class="text-danger"> Debe contener al menos 6 carácteres</p>
     </div>
     <button type="submit" class="btn btn-primary">Iniciar</button>
-    <!--agregar un REGISTRAR y un OLVIDE LA CONTRASEÑA-->
+  
   </form>
 </div>

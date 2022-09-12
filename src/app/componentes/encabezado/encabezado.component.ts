@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
 import { PorfolioService } from 'src/app/servicios/porfolio.service';
 
 @Component({
@@ -8,15 +10,30 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
 })
 export class EncabezadoComponent implements OnInit {
   public classMenu: boolean = true;
+  isLogged = false;
   
-  constructor() { }
+  
+  constructor(private authService : AutenticacionService, private ruta: Router) { }
 
 
 
-  ngOnInit(): void { }
+  ngOnInit(): void { 
+    if (this.authService.getToken() === null){ 
+      this.isLogged = false;
+    } else {
+      this.isLogged = true;
+    }
+  }
+  
   mostarMenu(): void {
     this.classMenu = !this.classMenu
   }
+  cerrarSession(): void { 
+    sessionStorage.clear();
+    
+
+  }
+  
 }
 
 

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable} from 'rxjs';
+import { Observable } from 'rxjs';
 import { educacion } from '../modelos/educacion.modelo';
 import { experiencia } from '../modelos/experiencia.modelo';
 
@@ -12,43 +12,52 @@ export class PorfolioService {
 
   constructor(private http: HttpClient) { }
 
- 
-  DatosPersona():Observable<any> {
+
+  DatosPersona(): Observable<any> {
     return this.http.get('http://localhost:8080/persona/lista');
   }
 
   //Componente educacion
-  DatosEducacion():Observable<any> {    
+  DatosEducacion(): Observable<any> {
     return this.http.get<any>('http://localhost:8080/educacion/lista');
-}
+  }
 
-GuardarEdu(educacion: educacion): Observable<any> {
-  return this.http.post<any>('http://localhost:8080/educacion/new',educacion);
-}
+  GuardarEdu(educacion: educacion): Observable<any> {
+    return this.http.post<any>('http://localhost:8080/educacion/new', educacion);
+  }// si no necesitamos enviar nada en el RequestBody agregarmos {} 
 
-EditEducacion(id: number, educacion:educacion): Observable<any> {
-  return this.http.put<any>('http://localhost:8080/educacion/editar/${id}',educacion);
-}
+  EditEducacion(id: number, educacion: educacion): Observable<any> {
+    return this.http.put<any>(`http://localhost:8080/educacion/editar/${id}`, educacion);
+  }
 
-BorrarEducacion(id: number): Observable<any> {
-  return this.http.delete<any>('http://localhost:8080/educacion/borrar/${id}');
- }
+  BorrarEducacion(id: number): Observable<any> {
+    return this.http.delete<any>(`http://localhost:8080/educacion/borrar/${id}`);  
+  }
 
- //componente experiencia
-DatosExperiencia():Observable<any> {
-  return this.http.get<any>('http://localhost:8080/experiencia/lista');
-}
-GuardarExp(experiencia:experiencia): Observable<any> {
-  return this.http.post<any>('http://localhost:8080/experiencia/new',experiencia);
-}
+  DetalleEducacion(id: number): Observable<any>{
+    return this.http.get<any>(`http://localhost:8080/educacion/detail/${id}`);
+  }
 
-EditExperiencia(id: number, experiencia:experiencia): Observable<any> {
-  return this.http.put<any>('http://localhost:8080/experiencia/editar/${id}',experiencia);
-}
+  //componente experiencia
+  DatosExperiencia(): Observable<any> {
+    return this.http.get<any>('http://localhost:8080/experiencia/lista');
+  }
+  GuardarExp(experiencia: experiencia): Observable<any> {
+    return this.http.post<any>('http://localhost:8080/experiencia/new', experiencia);
+  }
 
-Borrarexperiencia(id: number): Observable<any> {
-  return this.http.delete<any>('http://localhost:8080/experiencia/borrar/${id}');
- }
+  EditExperiencia(id: number, experiencia: experiencia): Observable<any> {
+    return this.http.put<any>(`http://localhost:8080/experiencia/editar/${id}`, experiencia);
+  }
+
+  Borrarexperiencia(id: number): Observable<any> {
+    return this.http.delete<any>(`http://localhost:8080/experiencia/borrar/${id}`);
+  }
+  
+  DetalleExperiencia(id: number): Observable<any>{
+    return this.http.get<any>(`http://localhost:8080/experiencia/detail/${id}`);
+  }
+
 
 }
 
@@ -71,7 +80,7 @@ Borrarexperiencia(id: number): Observable<any> {
   //para el caso de las listas como por ejemplo en EXPERIENCIAS
   //angular ofrece las directivas, comandos que ofrece que pueden asignarse a cualquier etiqueta por medio de atributos
   //que permiten manipular el DOM
-  //directivas de estructuras, ng for que permite recorrer cada uno de los elementos 
+  //directivas de estructuras, ng for que permite recorrer cada uno de los elementos
   //que tenemos en el array(JSON) y mostrar los datos.
   //primero inyectamos en el componente el servicio, creando una variable de tipo any
   //declaramos el metodo y asignamos el valor recibido a la variable
