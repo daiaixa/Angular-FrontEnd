@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HabilidadesComponent implements OnInit {
 
-  habilidades: string[] = ["HTML", "CSS", "Java Script", "Bootstrap","Angular", "Typescript", "NodeJS", "JAVA", "Spring Boot"];
+  habilidades: string[] = ["HTML", "CSS", "Java Script", "Bootstrap","Angular", "MySQL", "NodeJS", "JAVA", "Spring Boot"];
 
   constructor() { }
 

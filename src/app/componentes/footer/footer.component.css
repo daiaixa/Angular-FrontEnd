@@ -1,0 +1,23 @@
+.pie-pagina {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    margin-top: 4px;
+}
+p{
+    padding: auto;
+}
+a {
+    text-decoration: none;
+    color: var(--color-nav);
+    text-decoration: none;
+    transition: all .4s ease-in-out;
+}
+a:hover {
+    transform: scale(3);
+}
+
+#footer {
+    border-top: solid 1px;
+}

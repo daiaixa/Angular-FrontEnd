@@ -85,4 +85,7 @@
     span {
         padding-left: 10px;
     }
+    .menu-link:hover {
+        color: var(--color-nav);
+    }
 }

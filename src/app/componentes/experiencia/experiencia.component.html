@@ -1,17 +1,22 @@
 <div class="experiencia p-5 text-muted" id="experiencia">
-    <h2 class="text-muted mb-0 ml-3" id="titulo">Experiencia <button type="button" class="btn btn-primary" *ngIf="isLogged" routerLink="/new-experiencia">Agregar</button></h2>
+    <h2 class="text-muted mb-0 ml-3" id="titulo">Experiencia <button type="button" class="btn btn-primary"
+            *ngIf="isLogged" routerLink="/new-experiencia">Agregar</button></h2>
     <div>
         <hr class="decorador" />
     </div>
     <ul>
         <li *ngFor="let experiencia of datosExperiencia">
-            <div class="botones" *ngIf="isLogged"><button type="button" class="btn btn-success" routerLink="/editarexp/{{experiencia.id}}">Editar</button>
-                <button type="button" class="btn btn-danger" (click)="borrar(experiencia.id)">Borrar</button></div>
             <div class="experiencia">
-                <h3 class="mt-5 mb-0 text-muted">
-                    <i class="fa-solid fa-briefcase"></i>
-                    <strong> {{experiencia.categoria}}</strong>                    
-                </h3>
+                <div>
+                    <h3 class="mt-5 mb-0 text-muted">
+                        <i class="fa-solid fa-briefcase"></i>
+                        <strong> {{experiencia.categoria}}</strong>
+                    </h3>
+                    <div class="botones" *ngIf="isLogged"><button type="button" class="btn btn-success"
+                            routerLink="/editarexp/{{experiencia.id}}">Editar</button>
+                        <button type="button" class="btn btn-danger" (click)="borrar(experiencia.id)">Borrar</button>
+                    </div>
+                </div>
                 <h4 class="text-muted">{{experiencia.puesto}}</h4>
                 <p class="text-muted"> {{experiencia.descripcion}} </p>
                 <div id="inicio-fin">

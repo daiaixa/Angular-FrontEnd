@@ -29,10 +29,11 @@ export class EditarExpComponent implements OnInit {
     this.datosPorfolio.EditExperiencia(id, this.exp).subscribe(
       data => {
         this.exp = data;
+        this.ruta.navigate(['']);
       }, err => {
         alert("Error al modificar")
       });
-    this.ruta.navigate(['']);
+    
   }
 
 }

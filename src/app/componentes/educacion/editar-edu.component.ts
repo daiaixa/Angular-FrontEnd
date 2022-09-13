@@ -31,9 +31,10 @@ export class EditarEduComponent implements OnInit {
     this.datosPorfolio.EditEducacion(id, this.edu).subscribe(
       data => {
         this.edu = data;
+         this.ruta.navigate(['']);
       }, err => {
         alert("Error al modificar");    
       });
-    this.ruta.navigate(['']);
+   
   } 
 }

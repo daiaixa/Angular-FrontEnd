@@ -8,13 +8,15 @@
     <ul>
         <li *ngFor="let educacion of datosEducacion">
             <div class="educacion">
-                <div class="botones" *ngIf="isLogged"><button type="button" class="btn btn-success"
-                        routerLink="/editaredu/{{educacion.id}}">Editar</button>
-                    <button type="button" class="btn btn-danger" (click)="borrar(educacion.id)">Borrar</button>
+                <div>
+                    <h3><i class="fa-solid fa-graduation-cap"></i>
+                        <strong class="text-muted"> {{educacion.establecimiento}}</strong>
+                    </h3>
+                    <div class="botones" *ngIf="isLogged"><button type="button" class="btn btn-success"
+                            routerLink="/editaredu/{{educacion.id}}">Editar</button>
+                        <button type="button" class="btn btn-danger" (click)="borrar(educacion.id)">Borrar</button>
+                    </div>
                 </div>
-                <h3><i class="fa-solid fa-graduation-cap"></i>
-                    <strong class="text-muted"> {{educacion.establecimiento}}</strong>
-                </h3>
                 <h4 class="text-secondary mt-3 mb-4">
                     {{educacion.curso}} <br />
                 </h4>

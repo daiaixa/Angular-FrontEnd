@@ -19,6 +19,7 @@ import { EditarEduComponent } from './componentes/educacion/editar-edu.component
 import { CrearEduComponent } from './componentes/educacion/crear-edu.component';
 import { EditarExpComponent } from './componentes/experiencia/editar-exp.component';
 import { CrearExpComponent } from './componentes/experiencia/crear-exp.component';
+import { FooterComponent } from './componentes/footer/footer.component';
 
 
 
@@ -36,7 +37,8 @@ import { CrearExpComponent } from './componentes/experiencia/crear-exp.component
     EditarEduComponent,
     CrearEduComponent,
     EditarExpComponent,
-    CrearExpComponent
+    CrearExpComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
