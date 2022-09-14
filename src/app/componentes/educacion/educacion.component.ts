@@ -39,7 +39,6 @@ this.cargarListaEdu();
   cargarListaEdu(): void {
     this.datosPorfolio.DatosEducacion().subscribe(data => {
       this.datosEducacion = data;
-      console.log(this.datosEducacion);//a modo de observar que llegan los objetos
     });
   }
 

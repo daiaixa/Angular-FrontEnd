@@ -8,12 +8,11 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AutenticacionService {
-  authUrl = "http://localhost:8080/auth/login"
+  authUrl = "https://back-porfolio-daiana.herokuapp.com/auth/login"
   currentUserSubject: BehaviorSubject<any>; 
 
   constructor(private http: HttpClient) {
 
-    console.log("el serrvicio de autenticación esta funcionando");
 
     this.currentUserSubject = new BehaviorSubject<any>(JSON.parse(sessionStorage.getItem('currentUser') || '{}'));//inicializamos el objeto y lo instanciamos con lo que hay
     

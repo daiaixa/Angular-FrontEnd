@@ -16,8 +16,7 @@ export class AcercaDeMiComponent implements OnInit {
   ngOnInit(): void {
 
     this.datosPorfolio.DatosPersona().subscribe(data => {
-      this.datosPersonas = data[0];
-      console.log(this.datosPersonas);   
+      this.datosPersonas = data[0];  
     });
   }
 
