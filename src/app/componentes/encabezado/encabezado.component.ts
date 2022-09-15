@@ -9,7 +9,7 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
   styleUrls: ['./encabezado.component.css']
 })
 export class EncabezadoComponent implements OnInit {
-  public classMenu: boolean = true;
+  public classMenu = true;
   isLogged = false;
   
   
@@ -30,9 +30,8 @@ export class EncabezadoComponent implements OnInit {
   }
   cerrarSession(): void { 
     sessionStorage.clear();
-    
-
   }
+
   
 }
 

@@ -1,6 +1,11 @@
+
 <div class="container mt-5 mx-auto">
     <div class="row">
-        <div class="col-md-6 mx-auto-4"> 
+        <a class="back" href="/perfil"><i class="bi bi-arrow-left mb-5">  Volver</i></a>
+        <div class="d-flex mx-auto" >
+            <h1 class="mb-5">Editar Educación</h1>
+        </div>     
+        <div class="col-md-6 mx-auto-4">
             <form (ngSubmit)="editEdu()" novalidate #f="ngForm">
                 <div class="form-group">
                     <label for="establecimiento"> Establecimiento donde se dicta: </label>
@@ -22,7 +27,7 @@
                     <label for="fecha_fin"> Fecha de finalización: </label>
                     <input type="Date" class="form-control" id="fecha_fin" name="fecha_fin" [(ngModel)]="edu.fecha_fin" required>
                 </div>
-                <button type="submit" class="btn btn-primary mt-5" [disabled]="!f.valid">Actualizar Educación</button>
+                <button type="submit" class="btn btn-primary mt-5" [disabled]="!f.valid">Actualizar</button>
             </form>
         </div>
     </div>

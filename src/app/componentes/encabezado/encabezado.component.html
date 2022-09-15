@@ -1,18 +1,14 @@
 <header>
-    <div>
+    <div class="logo">
+        <img src="./assets/APLogo.png" alt="">
+    </div>        
         <span (click)="mostarMenu()" class="nav-bar" id="btnMenu"><i class="fa fa-bars" aria-hidden="true"></i></span>
         <nav class="main-nav">
             <ul id="menu" [ngClass]="classMenu ? 'menu' : 'mostar'">
-                <li class="menu-item" id="item"> <a href="perfil" class="menu-link">Inicio</a></li>
-                <li class="menu-item" id="item"> <a href="perfil/acerca-de" class="menu-link">Acerca de mi</a></li>
-                <li class="menu-item" id="item"> <a href="perfil/habilidades" class="menu-link">Habilidades</a></li>
-                <li class="menu-item" id="item"> <a href="perfil/educacion" class="menu-link">Educación</a></li>
-                <li class="menu-item" id="item"> <a href="perfil/experiencia" class="menu-link">Experiencia</a></li>
-                <li class="menu-item" id="item" *ngIf="!isLogged"> <a href="login" class="menu-link"><i class="bi bi-box-arrow-in-right"></i></a></li>
-                <li class="menu-item" id="item"  *ngIf="isLogged"> <a (click)="cerrarSession()" class="menu-link" href="perfil"><i class="bi bi-box-arrow-right"></i></a></li>
-
+                <li class="menu-item" id="item" *ngIf="!isLogged"> <a href="login" class="menu-link">Iniciar Sesión</a>
+                </li>
+                <li class="menu-item" id="item" *ngIf="isLogged"> <a (click)="cerrarSession()" class="menu-link"
+                        href="perfil">Cerrar Sesión</a></li>
             </ul>
         </nav>
-       
-    </div>
 </header>

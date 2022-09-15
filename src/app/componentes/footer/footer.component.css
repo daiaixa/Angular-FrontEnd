@@ -14,10 +14,14 @@ a {
     text-decoration: none;
     transition: all .4s ease-in-out;
 }
-a:hover {
-    transform: scale(3);
+button:hover {
+    transform: scale(1);
+    background-color: var(--color-nav);
 }
 
 #footer {
     border-top: solid 1px;
+}
+button {
+    background-color: rgb(114, 114, 112);
 }

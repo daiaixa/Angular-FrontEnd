@@ -1,5 +1,9 @@
-<div class="container mt-5 mx-auto">
+<div class="container mt-3 mx-auto">
     <div class="row">
+        <a class="back" href="/perfil"><i class="bi bi-arrow-left mb-5">  Volver</i></a>
+        <div class="d-flex mx-auto" >
+            <h1 class="mb-3">Crear Experiencia</h1>
+        </div>
         <div class="col-md-6 mx-auto-4">
             <form (ngSubmit)="crearExp()" novalidate #f="ngForm">
                 <div class="form-group">
@@ -30,7 +34,7 @@
                     <label for="fecha_fin"> Fecha de finalización: </label>
                     <input type="Date" class="form-control" id="fecha_fin" name="fecha_fin" [(ngModel)]="fecha_fin" required>
                 </div>
-                <button type="submit" class="btn btn-primary mt-5" [disabled]="!f.valid">Agregar Experiencia</button>
+                <button type="submit" class="btn btn-primary mt-3" [disabled]="!f.valid">Agregar</button>
             </form>
         </div>
     </div>

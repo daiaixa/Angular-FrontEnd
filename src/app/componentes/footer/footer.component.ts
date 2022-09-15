@@ -10,6 +10,12 @@ export class FooterComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
+  goToUp(): void { 
+    document.body.scrollIntoView({
+        behavior:"smooth",
+    });
+}; 
 
 }

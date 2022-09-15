@@ -1,10 +1,15 @@
 <div class="container mt-5 mx-auto">
     <div class="row">
+        <a class="back" href="/perfil"><i class="bi bi-arrow-left mb-5">  Volver</i></a>
+        <div class="d-flex mx-auto" >
+            <h1 class="mb-5">Crear Educación</h1>
+        </div>
         <div class="col-md-6 mx-auto-4">
             <form (ngSubmit)="create()" novalidate #f="ngForm">
                 <div class="form-group">
                     <label for="establecimiento"> Establecimiento donde se dicta: </label>
-                    <input type="text" class="form-control" id="establecimiento" name="establecimiento" [(ngModel)]="establecimiento" required>
+                    <input type="text" class="form-control" id="establecimiento" name="establecimiento"
+                        [(ngModel)]="establecimiento" required>
                 </div>
                 <div class="form-group">
                     <label for="curso"> Curso: </label>
@@ -12,17 +17,20 @@
                 </div>
                 <div class="form-group">
                     <label for="descripcion"> Descripcion breve acerca del curso: </label>
-                    <textarea type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="descripcion" required></textarea>
+                    <textarea type="text" class="form-control" id="descripcion" name="descripcion"
+                        [(ngModel)]="descripcion" required></textarea>
                 </div>
                 <div class="form-group">
                     <label for="fecha_inicio"> Fecha de inicio: </label>
-                    <input type="Date" class="form-control" id="fecha_inicio" name="fecha_inicio" [(ngModel)]="fecha_inicio" required>
+                    <input type="Date" class="form-control" id="fecha_inicio" name="fecha_inicio"
+                        [(ngModel)]="fecha_inicio" required>
                 </div>
                 <div class="form-group">
                     <label for="fecha_fin"> Fecha de finalización: </label>
-                    <input type="Date" class="form-control" id="fecha_fin" name="fecha_fin" [(ngModel)]="fecha_fin" required>
+                    <input type="Date" class="form-control" id="fecha_fin" name="fecha_fin" [(ngModel)]="fecha_fin"
+                        required>
                 </div>
-                <button type="submit" class="btn btn-primary mt-5" [disabled]="!f.valid">Agregar Educación</button>
+                <button type="submit" class="btn btn-success mt-5" [disabled]="!f.valid">Agregar</button>
             </form>
         </div>
     </div>

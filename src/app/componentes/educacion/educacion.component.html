@@ -1,6 +1,6 @@
 <div class="educacion p-5 text-dark">
     <h2 class="text-muted mb-0" id="titulo">Educación <button type="button" class="btn btn-primary" *ngIf="isLogged"
-            routerLink="/new-educacion">Agregar</button></h2>
+            routerLink="/new-educacion"><i class="bi bi-plus-lg"></i></button></h2>
     <div>
         <hr class="decorador" />
     </div>
@@ -13,8 +13,8 @@
                         <strong class="text-muted"> {{educacion.establecimiento}}</strong>
                     </h3>
                     <div class="botones" *ngIf="isLogged"><button type="button" class="btn btn-success"
-                            routerLink="/editaredu/{{educacion.id}}">Editar</button>
-                        <button type="button" class="btn btn-danger" (click)="borrar(educacion.id)">Borrar</button>
+                            routerLink="/editaredu/{{educacion.id}}"><i class="bi bi-pencil"></i></button>
+                        <button type="button" class="btn btn-danger" (click)="borrar(educacion.id)"><i class="bi bi-trash3"></i></button>
                     </div>
                 </div>
                 <h4 class="text-secondary mt-3 mb-4">
