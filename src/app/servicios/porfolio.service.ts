@@ -14,48 +14,48 @@ export class PorfolioService {
 
 
   DatosPersona(): Observable<any> {
-    return this.http.get('https://back-porfolio-daiana.herokuapp.com/persona/lista');
+    return this.http.get('https://backendporfolio-zv67.onrender.com/persona/lista');
   }
 
   //Componente educacion
   DatosEducacion(): Observable<any> {
-    return this.http.get<any>('https://back-porfolio-daiana.herokuapp.com/educacion/lista');
+    return this.http.get<any>('https://backendporfolio-zv67.onrender.com/educacion/lista');
   }
 
   GuardarEdu(educacion: educacion): Observable<any> {
-    return this.http.post<any>('https://back-porfolio-daiana.herokuapp.com/educacion/new', educacion);
+    return this.http.post<any>('https://backendporfolio-zv67.onrender.com/educacion/new', educacion);
   }// si no necesitamos enviar nada en el RequestBody agregarmos {} 
 
   EditEducacion(id: number, educacion: educacion): Observable<any> {
-    return this.http.put<any>(`https://back-porfolio-daiana.herokuapp.com/educacion/editar/${id}`, educacion);
+    return this.http.put<any>(`https://backendporfolio-zv67.onrender.com/educacion/editar/${id}`, educacion);
   }
 
   BorrarEducacion(id: number): Observable<any> {
-    return this.http.delete<any>(`https://back-porfolio-daiana.herokuapp.com/educacion/borrar/${id}`);  
+    return this.http.delete<any>(`https://backendporfolio-zv67.onrender.com/educacion/borrar/${id}`);  
   }
 
   DetalleEducacion(id: number): Observable<any>{
-    return this.http.get<any>(`https://back-porfolio-daiana.herokuapp.com/educacion/detail/${id}`);
+    return this.http.get<any>(`https://backendporfolio-zv67.onrender.com/educacion/detail/${id}`);
   }
 
   //componente experiencia
   DatosExperiencia(): Observable<any> {
-    return this.http.get<any>('https://back-porfolio-daiana.herokuapp.com/experiencia/lista');
+    return this.http.get<any>('https://backendporfolio-zv67.onrender.com/experiencia/lista');
   }
   GuardarExp(experiencia: experiencia): Observable<any> {
-    return this.http.post<any>('https://back-porfolio-daiana.herokuapp.com/experiencia/new', experiencia);
+    return this.http.post<any>('https://backendporfolio-zv67.onrender.com/experiencia/new', experiencia);
   }
 
   EditExperiencia(id: number, experiencia: experiencia): Observable<any> {
-    return this.http.put<any>(`https://back-porfolio-daiana.herokuapp.com/experiencia/editar/${id}`, experiencia);
+    return this.http.put<any>(`https://backendporfolio-zv67.onrender.com/experiencia/editar/${id}`, experiencia);
   }
 
   Borrarexperiencia(id: number): Observable<any> {
-    return this.http.delete<any>(`https://back-porfolio-daiana.herokuapp.com/experiencia/borrar/${id}`);
+    return this.http.delete<any>(`https://backendporfolio-zv67.onrender.com/experiencia/borrar/${id}`);
   }
   
   DetalleExperiencia(id: number): Observable<any>{
-    return this.http.get<any>(`https://back-porfolio-daiana.herokuapp.com/experiencia/detail/${id}`);
+    return this.http.get<any>(`https://backendporfolio-zv67.onrender.com/experiencia/detail/${id}`);
   }
 
 
